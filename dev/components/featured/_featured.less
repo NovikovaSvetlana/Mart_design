@@ -1,0 +1,43 @@
+.featured {
+    background-color: white;
+    height: auto;
+
+    &-item {
+        display: inline-block;
+        width: 20%;
+        margin: 50px 15px;
+        position: relative;
+        img {
+            width: 100%;
+            height: 250px;
+            background-color: #e9f0fd;
+        }
+        &-name{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background-color: black;
+            color: white;
+            &:hover {
+                background-color: #1abc9c;
+            }
+            
+            .product {
+                display: inline-block;
+                width: 70%;
+                padding: 10px 0;
+                padding-left: 10px;
+                
+            }
+            .price {
+                display: inline-block;
+                text-align: center;
+                height: 100%;
+                width: 20%;
+                background-color: rgba(165, 146, 146, 0.5);
+                float: right;
+                padding: 10px 0;
+            }
+        }
+    }
+}

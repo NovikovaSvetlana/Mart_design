@@ -1,0 +1,51 @@
+.menu{
+	&-desktop{
+		text-align: right;
+		padding-top: 24px;
+		@media screen and (max-width: @width-tablet){
+			display: none;
+		}
+		&-item{
+			display: inline-block;
+			margin-right: 30px;
+			.dropdown-btn{
+				.dropdown-triangle(black, 4);
+				&:after{
+					right: 0;
+				}
+			}
+		}
+	}
+	&-mobile{
+		display: none;
+	}
+	@media screen and (max-width: @width-tablet){
+		&-mobile{
+			background-color: #fd926d;
+			line-height: 96px;
+			padding: 0 20px;
+			display: block;
+			&-title{
+				text-transform: uppercase;
+				color: white;
+				.fontSize(30);
+				
+			}
+			&-btn{
+				float: right;
+				padding-top: 33px;
+				span{
+					display: block;
+					margin-bottom: 6px;
+					width: 33px;
+					height: 6px;
+					background-color: white;
+					border-radius: 3px;
+					&:lastChild{
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}

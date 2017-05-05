@@ -1,0 +1,27 @@
+.row{
+	&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+.col{
+	float: left;
+}
+
+.grid(sm, 8);
+
+@media screen and (min-width: @width-phone){
+	.grid(md, 8);
+}
+
+@media screen and (min-width: @width-tablet){
+	.grid(lg, 8);
+}
+.hidden{
+	&-sm{
+		@media screen and (max-width: @width-phone){
+			display: none;
+		}
+	}
+}

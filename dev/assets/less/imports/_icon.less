@@ -1,0 +1,33 @@
+@import "_sprite";
+.icon{
+    .inline(middle);
+}
+.icon-phone {
+    display: inline-block;
+	.sprite(@phone);
+//	margin-right: 15px;
+	@media screen and (max-width: @width-phone){
+		.sprite(@phone);
+       display: block;
+	}
+}
+.icon-phonegirl {
+    display: inline-block;
+    .sprite(@phonegirl-big);
+}
+.icon-bag-big {
+    display: inline-block;
+    .sprite(@bag-big);
+}
+.icon-handbag-big {
+    display: inline-block;
+    .sprite(@handbag-big);
+}
+.icon-twohand-big {
+    display: inline-block;
+    .sprite(@twohand-big);
+}
+.icon-shahter-big {
+    display: inline-block;
+    .sprite(@shahter-big);
+}

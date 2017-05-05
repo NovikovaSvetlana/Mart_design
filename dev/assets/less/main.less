@@ -1,0 +1,102 @@
+@import "imports/_setting";
+@import "imports/_reset";
+@import "imports/_mixins";
+@import "imports/_grid";
+@import "imports/_icon";
+@import "imports/_arrow";
+
+.container{
+	width: 100%;
+	margin: 0 auto;
+
+	@media screen and (min-width: @width-tablet){
+		width: 800px;
+	}
+
+	@media screen and (min-width: @width-desktop){
+		width: 1000px;
+	}
+}
+
+.underline {
+    text-decoration: underline;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.text{
+	&-center{
+		text-align: center;
+        color: white;
+        font-family: @font-family;
+	}
+}
+.firstLetter {
+            color: #1abc9c;
+            font-weight: 600;
+        }
+.black {
+    color: black;
+}
+.dropdown{
+	position: relative;
+	&-btn{
+		position: relative;
+		padding-right: 20px;
+		.dropdown-triangle;
+		@media screen and (min-width: @width-tablet){
+			.dropdown-triangle(white, 4px);
+		}
+	}
+	&-list{
+		display: none;
+		position: absolute;
+		width: 100%;
+		white-space: nowrap;
+		padding: 10px;
+		top: 120%;
+		&.active{
+			display: block;
+		}
+	}
+}
+.inline{
+    .inline(top);
+}
+ h2 {
+        font-size: 30px;
+        font-weight: 900;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    hr {
+        width: 200px;
+        background-color: #1abc9c;
+    }
+    hr.thin {
+        height: 2px;
+    }
+    hr.weight {
+        height: 10px;
+    }
+.chosen {
+            position: relative;
+            top: 0;
+        }
+@import "../../components/header/_header";
+@import "../../components/header/header_main/_header-main";
+@import "../../components/banner/_banner";
+@import "../../components/service/_service";
+@import "../../components/collection/_collection";
+@import "../../components/featured/_featured";
+@import "../../components/salesbanner/_salesbanner";
+@import "../../components/bestsellers/_bestsellers";
+@import "../../components/customerReview/_customerReview";
+@import "../../components/newsletter/_newsletter";
+@import "../../components/ourpartner/_ourpartner";
+@import "../../components/latestnews/_latestnews";
+@import "../../components/getintouch/_getintouch";
+@import "../../components/footer/_footer";
+@import "../../components/hidecart/_hidecart";
+
+

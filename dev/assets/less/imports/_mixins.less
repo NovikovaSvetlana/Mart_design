@@ -1,0 +1,42 @@
+.grid(@name, @count, @i: 1) when (@i <= @count){
+	.@{name}@{i}{
+		width: @i * (100% / @count);
+		box-sizing: border-box;
+	}
+	.grid(@name, @count, @i+1);
+}
+.push(@name, @count, @i: 1) when (@i <= @count){
+	.push-@{name}@{i}{
+		position: relative;
+		left: @i * (100% / @count)
+	}
+	.push(@name, @count, @i+1);
+}
+.pull(@name, @count, @i: 1) when (@i <= @count){
+	.pull-@{name}@{i}{
+		position: relative;
+		left: -@i * (100% / @count)
+	}
+	.pull(@name, @count, @i+1);
+}
+.fontSize(@size){
+	font-size: @size / 16rem;
+}
+
+.inline(@va: top){
+	display: inline-block;
+	vertical-align: @va;
+}
+
+.dropdown-triangle(@color: #ffffff, @border-size: 10px){
+	&:after{
+			content: '';
+			display: block;
+			border: @border-size solid transparent;
+			border-top-color: @color;
+			position: absolute;
+			top: 50%;
+			right: -10px;
+
+		}
+}
